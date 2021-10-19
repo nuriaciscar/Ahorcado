@@ -1,4 +1,4 @@
-import "./css";
+import "./KeyboardButton.css";
 import PropTypes from "prop-types";
 
 function KeyboardButton({ text, actionOnClick }) {

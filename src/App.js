@@ -1,9 +1,41 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import Prueba from "./components/prueba/prueba.js";
+import KeyboardButton from "./components/Keyboard/KeyboardButton";
 
 function App() {
+  const wordList = ["pierna", "aguacate", "pizarra", "enciclopedia"];
+
+  const wordTest = "enciclopedia";
+  const wordArray = wordTest.split("");
+  const [letterObjects, setLetterObjects] = useState(
+    wordArray.map((letter, i) => ({
+      position: i,
+      letter: letter,
+      key: letter,
+      isGuessed: false,
+    }))
+  );
+
+  const [errorCounter, setErrorCounter] = useState(0);
+
+  const [currentLetter, setCurrentLetter] = useState("");
+
+  const changeCurrentLetter = () => setCurrentLetter("a");
+
+  const guessedLetter = () =>
+    setLetterObjects(
+      letterObjects.map((letter) =>
+        letter.letter === currentLetter
+          ? { ...letter, isGuessed: true }
+          : letter
+      )
+    );
+
   return (
+    <>
+      <KeyboardButton text="cambiarLetra" actionOnClick={changeCurrentLetter} />
+      <KeyboardButton text="cambiarGuessed" actionOnClick={guessedLetter} />
+    </>
     // <section className="container">
     //   <div className="hangman-figure">
     //     <svg className="hangman" viewBox="0 0 96 96" width="300" height="300">
