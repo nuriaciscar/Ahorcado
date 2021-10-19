@@ -29,6 +29,7 @@ body {
 .word__letter {
   border-bottom: 1px solid black;
   width: 15px;
+  user-select: none;
 }
 
 .hidden {
