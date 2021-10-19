@@ -1,15 +1,14 @@
 import PropTypes from "prop-types";
 
-const Word = ({ wordList }) => {
-  wordList.map((letter) => (
+const Word = ({ letter }) => {
+  return (
     <div className={`word__letter${letter.isGuessed ? " guessed" : " hidden"}`}>
-      {" "}
-      {letter}
+      {letter.letter}
     </div>
-  ));
+  );
 };
-Word.propTypes = {
-  word: PropTypes.array.isRequired,
-};
+// Word.propTypes = {
+//   word: PropTypes.array.isRequired,
+// };
 
 export default Word;
