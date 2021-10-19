@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./App.css";
+import Letter from "./components/Letter/Letter.js";
 import KeyboardButton from "./components/Keyboard/KeyboardButton";
 
 function App() {
@@ -35,6 +36,11 @@ function App() {
     <>
       <KeyboardButton text="cambiarLetra" actionOnClick={changeCurrentLetter} />
       <KeyboardButton text="cambiarGuessed" actionOnClick={guessedLetter} />
+      <div className="word">
+        {letterObjects.map((letter, i) => (
+          <Letter letter={letter} key={i} />
+        ))}
+      </div>
     </>
     // <section className="container">
     //   <div className="hangman-figure">

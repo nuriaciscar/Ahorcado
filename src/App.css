@@ -26,3 +26,11 @@ body {
   width: 500px;
   justify-content: space-around;
 }
+.word__letter {
+  border-bottom: 1px solid black;
+  width: 15px;
+}
+
+.hidden {
+  color: rgba(0, 0, 0, 0);
+}
