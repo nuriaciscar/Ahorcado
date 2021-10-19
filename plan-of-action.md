@@ -4,11 +4,12 @@
 
 ### App
 
-- Crear un array de palabras
+// - Crear un array de palabras
+
 - Elegir de manera aleatoria una palabra
-- Asigna a cada letra de la palabra un index y una propiedad booleana de correcto
+  // - Asigna a cada letra de la palabra un index y una propiedad booleana de correcto
 - Ejecuta una función que settea la current letter al botón pulsado
-- Recorre la palabra y busca coincidencias entre currentLetter y la palabra
+  //- Recorre la palabra y busca coincidencias entre currentLetter y la palabra
   - Si hay coincidencia, envía la letra y la posición a Word
   - Si no, aumenta los fallos
   - Cambia la clase del botón dependiendo de si es correcto o no
