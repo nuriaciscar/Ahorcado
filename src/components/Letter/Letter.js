@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-const Word = ({ letter }) => {
+const Letter = ({ letter }) => {
   return (
     <div className={`word__letter${letter.isGuessed ? " guessed" : " hidden"}`}>
       {letter.letter}
@@ -11,4 +11,4 @@ const Word = ({ letter }) => {
 //   word: PropTypes.array.isRequired,
 // };
 
-export default Word;
+export default Letter;
