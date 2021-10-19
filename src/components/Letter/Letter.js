@@ -7,8 +7,14 @@ const Letter = ({ letter }) => {
     </div>
   );
 };
-// Word.propTypes = {
-//   word: PropTypes.array.isRequired,
-// };
+
+Letter.propTypes = {
+  letter: PropTypes.shape({
+    position: PropTypes.number.isRequired,
+    letter: PropTypes.string.isRequired,
+    key: PropTypes.string.isRequired,
+    isGuessed: PropTypes.bool.isRequired,
+  }),
+};
 
 export default Letter;

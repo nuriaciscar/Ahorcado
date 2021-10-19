@@ -4,6 +4,34 @@ import Letter from "./components/Letter/Letter.js";
 import KeyboardButton from "./components/Keyboard/KeyboardButton";
 
 function App() {
+  const alphabet = [
+    "A",
+    "B",
+    "C",
+    "D",
+    "E",
+    "F",
+    "G",
+    "H",
+    "I",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "O",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "U",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
   const wordList = ["pierna", "aguacate", "pizarra", "enciclopedia"];
 
   const wordTest = "enciclopedia";
@@ -21,7 +49,8 @@ function App() {
 
   const [currentLetter, setCurrentLetter] = useState("");
 
-  const changeCurrentLetter = () => setCurrentLetter("a");
+  const changeCurrentLetter = (event) =>
+    setCurrentLetter(event.target.textContent);
 
   const guessedLetter = () =>
     setLetterObjects(
@@ -41,6 +70,13 @@ function App() {
           <Letter letter={letter} key={i} />
         ))}
       </div>
+      {alphabet.map((letter) => (
+        <KeyboardButton
+          text={letter}
+          actionOnClick={(event) => changeCurrentLetter(event)}
+          key={letter}
+        />
+      ))}
     </>
     // <section className="container">
     //   <div className="hangman-figure">
