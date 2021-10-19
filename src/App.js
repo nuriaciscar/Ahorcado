@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import Letter from "./components/Letter/Letter.js";
 import KeyboardButton from "./components/Keyboard/KeyboardButton";
@@ -44,7 +44,7 @@ function App() {
     }))
   );
 
-  const [errorCounter, setErrorCounter] = useState(0);
+  //const [errorCounter, setErrorCounter] = useState(0);
 
   const [currentLetter, setCurrentLetter] = useState("");
 
