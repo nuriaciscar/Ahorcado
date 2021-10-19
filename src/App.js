@@ -16,6 +16,8 @@ function App() {
     }))
   );
 
+  const [errorCounter, setErrorCounter] = useState(0);
+
   const [currentLetter, setCurrentLetter] = useState("");
 
   const changeCurrentLetter = () => setCurrentLetter("a");
